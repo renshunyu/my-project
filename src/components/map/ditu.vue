@@ -3,7 +3,7 @@
       <chart id="chartmap" style="width: 39.6%; height: 65%; float: left;" :options="option"></chart>
       <chartuser id="liveacct" style="width: 26.4%; height: 65%; float: left;" :options="optionuser"></chartuser>
       <bingtu id="bingtu1" style="width: 33%; height: 33%; float: left;"></bingtu>
-      <bingtu id="bingtu2" style="width: 33%; height: 33%; float: left;"></bingtu>
+      <zhutu id="zhutu2" style="width: 33%; height: 33%; float: left;"></zhutu>
       <bingtu id="bingtu3" style="width: 33%; height: 33%; float: left;"></bingtu>
       <bingtu id="bingtu4" style="width: 33%; height: 33%; float: left;"></bingtu>
       <bingtu id="bingtu5" style="width: 33%; height: 33%; float: left;"></bingtu>
@@ -14,6 +14,7 @@ import ECharts from 'vue-echarts/components/ECharts.vue'
 import echarts from 'echarts'
 import 'echarts/map/js/china'
 import bingtu from '../bingtu/bingtu'
+import zhutu from '../zhutu/zhutu'
 export default {
   name: 'ditu',
   data () {
@@ -123,7 +124,7 @@ export default {
       echarts.getInstanceByDom(document.getElementById('chartmap')).resize() // echart自适应,需要给元素指定大小
       echarts.getInstanceByDom(document.getElementById('liveacct')).resize()
       echarts.getInstanceByDom(document.getElementById('bingtu1')).resize()
-      echarts.getInstanceByDom(document.getElementById('bingtu2')).resize()
+      echarts.getInstanceByDom(document.getElementById('zhutu2')).resize()
       echarts.getInstanceByDom(document.getElementById('bingtu3')).resize()
       echarts.getInstanceByDom(document.getElementById('bingtu4')).resize()
       echarts.getInstanceByDom(document.getElementById('bingtu5')).resize()
@@ -132,7 +133,8 @@ export default {
   components: {
     'chart': ECharts,
     'chartuser': ECharts,
-    'bingtu': bingtu
+    'bingtu': bingtu,
+    'zhutu': zhutu
   }
 }
 </script>
