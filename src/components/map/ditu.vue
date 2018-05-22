@@ -4,9 +4,10 @@
       <chartuser id="liveacct" style="width: 26.4%; height: 65%; float: left;" :options="optionuser"></chartuser>
       <bingtu id="bingtu1" style="width: 33%; height: 33%; float: left;"></bingtu>
       <zhutu id="zhutu2" style="width: 33%; height: 33%; float: left;"></zhutu>
-      <bingtu id="bingtu3" style="width: 33%; height: 33%; float: left;"></bingtu>
-      <bingtu id="bingtu4" style="width: 33%; height: 33%; float: left;"></bingtu>
-      <bingtu id="bingtu5" style="width: 33%; height: 33%; float: left;"></bingtu>
+      <szhutu id="szhutu3" style="width: 33%; height: 33%; float: left;"></szhutu>
+      <taskcyclenum id="taskcyclenum" style="width: 16.5%; height: 33%; float: left;"></taskcyclenum>
+      <tasknum id="tasknum" style="width: 16.5%; height: 33%; float: left;"></tasknum>
+      <auditreport id="auditreport" style="width: 33%; height: 33%; float: left;"></auditreport>
   </div>
 </template>
 <script >
@@ -15,6 +16,10 @@ import echarts from 'echarts'
 import 'echarts/map/js/china'
 import bingtu from '../bingtu/bingtu'
 import zhutu from '../zhutu/zhutu'
+import szhutu from '../zhutu/szhutu'
+import auditreport from '../zhutu/auditreport'
+import tasknum from '../zhutu/tasknum'
+import taskcyclenum from '../bingtu/taskcyclenum'
 export default {
   name: 'ditu',
   data () {
@@ -125,16 +130,21 @@ export default {
       echarts.getInstanceByDom(document.getElementById('liveacct')).resize()
       echarts.getInstanceByDom(document.getElementById('bingtu1')).resize()
       echarts.getInstanceByDom(document.getElementById('zhutu2')).resize()
-      echarts.getInstanceByDom(document.getElementById('bingtu3')).resize()
-      echarts.getInstanceByDom(document.getElementById('bingtu4')).resize()
-      echarts.getInstanceByDom(document.getElementById('bingtu5')).resize()
+      echarts.getInstanceByDom(document.getElementById('szhutu3')).resize()
+      echarts.getInstanceByDom(document.getElementById('taskcyclenum')).resize()
+      echarts.getInstanceByDom(document.getElementById('tasknum')).resize()
+      echarts.getInstanceByDom(document.getElementById('auditreport')).resize()
     }
   },
   components: {
     'chart': ECharts,
     'chartuser': ECharts,
     'bingtu': bingtu,
-    'zhutu': zhutu
+    'zhutu': zhutu,
+    'szhutu': szhutu,
+    'auditreport': auditreport,
+    'taskcyclenum': taskcyclenum,
+    'tasknum': tasknum
   }
 }
 </script>

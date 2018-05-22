@@ -12,7 +12,7 @@ export default {
       option: {
         title: {
           x: 'center',
-          text: 'ECharts例子个数统计',
+          text: '智能审计查询日志数',
           subtext: 'Rainbow bar example',
           link: 'http://echarts.baidu.com/doc/example.html'
         },
