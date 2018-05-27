@@ -12,6 +12,9 @@ export default {
       option: {
         title: {
           text: '统计报表及其操作数',
+          textStyle: {
+            color: '#00ff00'
+          },
           subtext: '纯属虚构'
         },
         tooltip: {

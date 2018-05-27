@@ -12,6 +12,9 @@ export default {
       option: {
         title: {
           text: '系统策略数',
+          textStyle: {
+            color: '#00ff00'
+          },
           subtext: '纯属虚构'
         },
         tooltip: {

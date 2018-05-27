@@ -13,6 +13,9 @@ export default {
         title: {
           x: 'center',
           text: '智能审计查询日志数',
+          textStyle: {
+            color: '#00ff00'
+          },
           subtext: 'Rainbow bar example',
           link: 'http://echarts.baidu.com/doc/example.html'
         },

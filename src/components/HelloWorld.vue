@@ -36,7 +36,7 @@ export default {
 }
 
 .mychar {
-  background-color: #ff0000;
+  //background-color: #ff0000;
   width: 33%;
   height: 33%;
   border-width: 1px;

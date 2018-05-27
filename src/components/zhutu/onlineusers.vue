@@ -1,18 +1,18 @@
 <template>
-  <chart id="tasknum" style="width: 100%; height: 100%; float: left;" :options="option"></chart>
+  <chart id="onlineusers" style="width: 100%; height: 100%; float: left;" :options="option"></chart>
 </template>
 <script >
 import ECharts from 'vue-echarts/components/ECharts.vue'
 import echarts from 'echarts'
 export default {
-  name: 'tasknum',
+  name: 'onlineusers',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
       option: {
         title: {
           x: 'center',
-          text: '审计任务生成数',
+          text: '移动业务支撑部门活跃用户数',
           textStyle: {
             color: '#00ff00'
           },
@@ -40,7 +40,7 @@ export default {
         yAxis: [
           {
             type: 'category',
-            data: ['Mon', 'Tue', 'Wed', 'Thu'],
+            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
             axisTick: {
               alignWithLabel: true
             }
@@ -51,7 +51,7 @@ export default {
             name: '直接访问',
             type: 'bar',
             barWidth: '60%',
-            data: [10, 52, 200, 334]
+            data: [10, 52, 200, 334, 390, 330, 220]
           }
         ]
       }
@@ -61,7 +61,7 @@ export default {
     setInterval(() => { this.option = this.option }, 100)
     // echarts.init(document.getElementById('mp')).setOption(this.option)
     // window.onresize = echarts.init(document.getElementById('mp')).resize
-    window.onresize = echarts.getInstanceByDom(document.getElementById('tasknum')).resize // echart自适应,需要给元素指定大小
+    window.onresize = echarts.getInstanceByDom(document.getElementById('onlineusers')).resize // echart自适应,需要给元素指定大小
   },
   components: {
     'chart': ECharts

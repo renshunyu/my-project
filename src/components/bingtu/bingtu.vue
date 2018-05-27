@@ -12,6 +12,9 @@ export default {
       option: {
         title: {
           text: '智能审计菜单操作数',
+          textStyle: {
+            color: '#00ff00'
+          },
           subtext: '纯属虚构',
           x: 'center'
         },
